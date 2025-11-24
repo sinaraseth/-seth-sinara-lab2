@@ -1,0 +1,46 @@
+Part 1: Containerize an application
+- Created a Dockerfile to package the Node.js app
+- Used node:lts-alpine as base image for smaller size
+- Learned docker build to create images and docker run to start containers
+- Exposed port 3000 to access the web app
+
+Part 2: Update the application
+- Modified source code and rebuilt the image
+- Learned to stop old containers and start new ones with updated code
+- Understood container immutability - changes require rebuilding
+
+Part 3: Share the application
+- Pushed Docker image to Docker Hub registry
+- Tagged images properly (username/repo:tag format)
+- Learned docker push and docker pull commands
+- Shared image so others can run the same app
+
+Part 4: Persist the DB
+- Used Docker volumes to persist data between container restarts
+- Created named volume (todo-db) to store database files
+- Learned data is lost without volumes when containers are removed
+
+Part 5: Use bind mounts
+- Mounted host directories into containers for live code updates
+- Enabled development workflow without rebuilding images
+- Used -v flag to map local files to container paths
+
+Part 6: Multi-container apps
+- Ran multiple containers that work together (app + database)
+- Connected containers using Docker networks
+- Learned containers can communicate by service names
+
+Part 7: Use Docker Compose
+- Created docker-compose.yml to define multi-container setup
+- Simplified running multiple services with single command
+- Learned docker compose up/down for managing app stack
+
+Part 8: Image-building best practices
+- Optimized Dockerfile with layer caching
+- Used .dockerignore to exclude unnecessary files
+- Learned multi-stage builds for smaller production images
+
+Part 9: What next
+- Explored container orchestration options (Kubernetes)
+- Learned about CI/CD integration with Docker
+- Understanding of production deployment considerations
